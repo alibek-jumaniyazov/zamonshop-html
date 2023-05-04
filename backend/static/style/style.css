@@ -164,6 +164,10 @@ p {
 .mobilResponsive{
     display: none;
 }
+.carousel{
+    width: 1200px!important;
+    height: 550px!important;
+}
 .carousel-item img{
     display: flex;
     align-items: center;
