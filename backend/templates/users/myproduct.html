@@ -1,0 +1,94 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class="userProfil">
+    <div class="userProfilLeft">
+        <a href="{% url 'users:users' %}"><button><i class="fa-solid fa-user"></i><span>Персональная
+                    данные</span></button></a>
+        <a href="{% url 'users:myproduct' %}"><button class="activeProfil"><i class="fa-solid fa-box"></i><span>Мои
+                    заказы</span></button></a>
+        <a href="{% url 'users:mylocation' %}"><button><i class="fa-solid fa-truck-fast"></i><span>дрес доставки</span></button></a>
+        <a href=""><button><i class="fa-solid fa-right-from-bracket fa-rotate-180"
+                    style="color: red; background: rgba(255, 0, 0, 0.168);"></i><span>Выйти из
+                    профиля</span></button></a>
+    </div>
+    <div class="myproducts">
+        <span class="myproducts_title">Мои заказы</span>
+        <div class="myproductsCat">
+            <li class="myproductsCatLI">Все заказы</li>
+            <li class="myproductsCatLI">Активный</li>
+            <li class="myproductsCatLI">Завершенный</li>
+            <li class="myproductsCatLI">Отменено</li>
+            <li class="myproductsCatLI">Рассрочка</li>
+        </div>
+        <div class="myproducts_products">
+            <div class="myproducts_products_product">
+                <div>
+                    <img src="https://parfumstock.uz/thumb/2/eBNXkH1T3xY0SHSSoiCEYg/r/d/3348901520065.jpg" alt="">
+                    <span class="myproducts_products_product_productName">Dior Sauvage Parfum 100 ml</span>
+                </div>
+                <span class="myproducts_products_product_Shtuk">3x</span>
+                <span class="myproducts_products_product_Price">12.000.000 sum</span>
+            </div>
+            <div class="myproducts_products_product">
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA9v3VjZP5HfcNZEa1iC0kBe69TUxZSCE6Ug&usqp=CAU" alt="">
+                    <span class="myproducts_products_product_productName">Dior Sauvage Parfum 100 ml</span>
+                </div>
+                <span class="myproducts_products_product_Shtuk">3x</span>
+                <span class="myproducts_products_product_Price">12.000.000 sum</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const lists = document.querySelectorAll('.myproductsCatLI')
+
+    // lists.forEach(item => {
+    //     item.onclick = () => {
+    //         item.classList.add('active')
+    //     }
+    // })
+    lists[0].classList.add('active')
+
+    lists[0].onclick = () => {
+        lists[0].classList.add('active')
+        lists[1].classList.remove('active')
+        lists[2].classList.remove('active')
+        lists[3].classList.remove('active')
+        lists[4].classList.remove('active')
+    }
+    lists[1].onclick = () => {
+        lists[1].classList.add('active')
+        lists[0].classList.remove('active')
+        lists[2].classList.remove('active')
+        lists[3].classList.remove('active')
+        lists[4].classList.remove('active')
+    }
+    lists[2].onclick = () => {
+        lists[0].classList.remove('active')
+        lists[2].classList.add('active')
+        lists[1].classList.remove('active')
+        lists[3].classList.remove('active')
+        lists[4].classList.remove('active')
+    }
+    lists[3].onclick = () => {
+        lists[3].classList.add('active')
+        lists[0].classList.remove('active')
+        lists[1].classList.remove('active')
+        lists[4].classList.remove('active')
+        lists[2].classList.remove('active')
+    }
+    lists[4].onclick = () => {
+        lists[4].classList.add('active')
+        lists[0].classList.remove('active')
+        lists[1].classList.remove('active')
+        lists[2].classList.remove('active')
+        lists[3].classList.remove('active')
+    }
+
+</script>
+
+{% endblock content %}

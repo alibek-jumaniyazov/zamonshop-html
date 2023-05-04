@@ -1,0 +1,224 @@
+.userProfil {
+    display: flex;
+    gap: 30px;
+    padding: 20px 0px;
+}
+
+.userProfil .userProfilLeft {
+    width: 300px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: 1px solid #3333335d;
+    padding: 15px;
+    border-radius: 8px;
+}
+.userProfil .userProfilLeft a {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: white;
+    gap: 10px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.userProfil .userProfilLeft a button {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: white;
+    gap: 10px;
+    padding: 5px;
+}
+
+.userProfil .userProfilLeft button:hover {
+    background-color: #3333331b;
+    border-radius: 5px;
+}
+
+
+.userProfil .userProfilLeft button i {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.095);
+    border-radius: 3px;
+}
+
+.userProfil .userInfos {
+    width: 90%;
+    border: 1px solid #3333335d;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.userProfil .userInfos .userInfos_Title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.userProfil .userInfos .inInfos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.userProfil .userInfos .inInfos .inInfosChil {
+    display: flex;
+    flex-direction: column;
+}
+
+.userProfil .userInfos .inInfos .inInfosChil input {
+    height: 35px;
+    padding-left: 5px;
+}
+
+.userProfil .userInfos .inInfos .inInfosChil select {
+    padding: 8px;
+}
+
+.userInfosSaveBtn {
+    width: 80px;
+    height: 30px;
+    background-color: rgba(209, 34, 34, 0.956);
+    border: none;
+    color: white;
+    border-radius: 3px; 
+}
+
+.userInfosSaveBtn:active {
+    transform: scale(0.99);
+}
+
+.userProfil .userProfilLeft .activeProfil {
+    background-color: #3333331b;
+    border-radius: 5px;
+}
+
+
+/* ======================================== myProduct ================================================== */ 
+
+.userProfil .myproducts {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.userProfil .myproducts .myproducts_title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.userProfil .myproducts .myproductsCat {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.397);
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 50px;
+}
+
+.userProfil .myproducts .myproductsCat li {
+    cursor: pointer;
+}
+
+.userProfil .myproducts .myproducts_products {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding-bottom: 50px;
+}
+
+.userProfil .myproducts .myproducts_products .myproducts_products_product {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.userProfil .myproducts .myproducts_products .myproducts_products_product img {
+    width: 100px;
+}
+
+.userProfil .myproducts .myproducts_products .myproducts_products_product .myproducts_products_product_productName {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.userProfil .myproducts .myproducts_products .myproducts_products_product .myproducts_products_product_Shtuk {
+    font-size: 18px;
+}
+
+.userProfil .myproducts .myproducts_products .myproducts_products_product .myproducts_products_product_Price {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.userProfil .myproducts .myproductsCat .active {
+    padding-bottom: 3px;
+    color: red;
+    border-bottom: 3px solid red;
+}
+
+/* ======================================== Adress ================================================== */ 
+
+.userProfil .userAdress {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #3333335d;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.userProfil .userAdress .userAdressTItle {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.userProfil .userAdress .addAdress {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.userProfil .userAdress .addAdress .addAdressChil {
+    display: flex;
+    flex-direction: column;
+}
+
+.userProfil .userAdress .addAdress .addAdressChil select {
+    padding: 8px;
+}
+
+.userProfil .userAdress .addAdress .addAdressChil input {
+    height: 35px;
+    padding-left: 5px;
+}
+
+.userProfil .userAdress .userAdressSave {
+    width: 80px;
+    height: 30px;
+    background-color: rgba(209, 34, 34, 0.956);
+    border: none;
+    color: white;
+    border-radius: 3px; 
+}
+
+.userProfil .userAdress .userAdressSave:active {
+    transform: scale(0.98);
+}
