@@ -169,7 +169,7 @@ p {
     align-items: center;
     justify-content: center;
     width: 1200px!important;
-    height: 400px!important;
+    height: 550px!important;
 }
 @media screen and (max-width: 414px) and (min-width: 360px) {
     .container{
