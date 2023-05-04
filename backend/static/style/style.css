@@ -164,6 +164,13 @@ p {
 .mobilResponsive{
     display: none;
 }
+.carousel-item img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1200px!important;
+    height: 700px!important;
+}
 @media screen and (max-width: 414px) and (min-width: 360px) {
     .container{
         width: 100%!important;
