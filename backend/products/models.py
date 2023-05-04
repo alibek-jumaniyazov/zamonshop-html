@@ -7,6 +7,8 @@ from mptt.fields import TreeForeignKey
 class Category(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
+
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
     
 
     class Meta:
@@ -27,7 +29,6 @@ class Subcategory(models.Model):
 
     def __str__(self):
         return self.name
-
 
 class Product(models.Model):
     name = models.CharField(max_length=255)

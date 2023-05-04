@@ -6,15 +6,14 @@
     <main>
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                {% for ban in banner %}
+                    <div class="carousel-item active">
+                        <img src="{{ban.image.url}}" class="d-block w-100" alt="">
+                    </div>
+                {% endfor %}
+                {% comment %} <div class="carousel-item">
                     <img src="{% static 'images/1.a742c0f72d4bfa03a98a.png.svg' %}" class="d-block w-100" alt="">
-                </div>
-                <div class="carousel-item active">
-                    <img src="{% static 'images/1.a742c0f72d4bfa03a98a.png.svg' %}" class="d-block w-100" alt="">
-                </div>
-                <div class="carousel-item active">
-                    <img src="{% static 'images/1.a742c0f72d4bfa03a98a.png.svg' %}" class="d-block w-100" alt="">
-                </div>
+                </div> {% endcomment %}
             </div>
         </div>
 
@@ -184,8 +183,6 @@
 
             </div>
         </div>
-
-
 
         <div class="productInfo">
             <h1>Ayollar uchun <img src="../images/Vector.svg" alt=""></h1>
@@ -694,5 +691,9 @@
 
     <!-- Main Qismi Tugashi -->
 
-
+    <script>
+        $('.carousel-item').carousel({
+            interval: 1000 * 1
+        });
+    </script>
 {% endblock content %}

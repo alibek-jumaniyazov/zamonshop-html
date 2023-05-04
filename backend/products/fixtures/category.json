@@ -1,0 +1,56 @@
+[
+    {
+        "model": "products.category",
+        "pk": 1,
+        "fields": {
+            "name": "Elektronika",
+            "slug": "elektronika",
+            "parent": null
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 2,
+        "fields": {
+            "name": "Noutbuklar",
+            "slug": "noutbuklar",
+            "parent": 1
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 3,
+        "fields": {
+            "name": "Acer",
+            "slug": "acer",
+            "parent": 2
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 4,
+        "fields": {
+            "name": "18+ Narsala",
+            "slug": "18-narsala",
+            "parent": null
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 5,
+        "fields": {
+            "name": "Seks kukla",
+            "slug": "seks-kukla",
+            "parent": 4
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 6,
+        "fields": {
+            "name": "Dureks",
+            "slug": "dureks",
+            "parent": 5
+        }
+    }
+]

@@ -1,15 +1,18 @@
 from django.shortcuts import render
 
-from products.models import Category, Subcategory
+from .models import Banner
+from products.models import Category
 
 # Create your views here.
 
+
 def index(request):
 
-    categories = Subcategory.objects.filter(children=None)
+    categories = Category.objects.filter(children=None)
 
     context = {
-        "categories": categories
+        "categories": categories,
+        "banner": Banner.objects.all().order_by("-id")[:5]
     }
 
     return render(request, 'home/index.html', context)

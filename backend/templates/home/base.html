@@ -106,42 +106,32 @@
                 <div class="kategoriListes">
 
                     <ul class="kategoriList">
-                        <li class="kategoriItem" data-target="Home">Home</li>
-                        <li class="kategoriItem" data-target="Settings">Setting</li>
-                        <li class="kategoriItem" data-target="about">About</li>
+                        {% for cat in category %}
+                            <li class="kategoriItem" data-target="{{cat.name}}">{{cat.name}}</li>
+                        {% endfor %}
+
                     </ul>
 
-                    <section id="Home">
+                    {% for cat in category %}
+                        <section id="{{cat.name}}">
+                            {% for chill in cat.children.all %}
+                                <div class="items">
 
-                        <div class="items">
+                                    <div class="">
+                                        <p>{{chill.name}}</p>
 
-                            <div class="">
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                                <p>aafeardok</p>
-                            </div>
+                                        <div class="plar">
+                                            {% for n in chill.children.all %}
+                                            <p>{{n.name}}</p>
+                                            {% endfor %}
+                                        </div>
 
-
-
-                        </div>
-
-
-                    </section>
+                                    </div>      
+                                    
+                                </div>
+                            {% endfor %}
+                        </section>
+                    {% endfor %}
 
                     <section id="Settings">
                         <h1> Settings </h1>

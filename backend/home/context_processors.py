@@ -1,5 +1,5 @@
-from products.models import Category, Subcategory
+from products.models import Category
 
 def categories(request):
-    return Subcategory.objects.filter(children=None)
-    
+    return {'category': Category.objects.filter(parent=None)}
+
