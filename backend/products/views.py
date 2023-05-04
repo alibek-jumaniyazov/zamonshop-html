@@ -16,6 +16,10 @@ def products(request):
 def product(request):
     return render(request, "products/product.html")
 
+def productCategory(request):
+    return render(request, "products/productsCategory.html")
+
+
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
