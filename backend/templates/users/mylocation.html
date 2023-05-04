@@ -1,0 +1,57 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="userProfil">
+        <div class="userProfilLeft">
+            <a href="{% url 'users:users' %}"><button><i class="fa-solid fa-user"></i><span>Персональная данные</span></button></a>
+            <a href="{% url 'users:myproduct' %}"><button><i class="fa-solid fa-box"></i><span>Мои заказы</span></button></a>
+            <a href="{% url 'users:mylocation' %}"><button class="activeProfil"><i class="fa-solid fa-truck-fast"></i><span>дрес доставки</span></button></a>
+            <a href=""><button><i class="fa-solid fa-right-from-bracket fa-rotate-180" style="color: red; background: rgba(255, 0, 0, 0.168);"></i><span>Выйти из профиля</span></button></a>
+        </div>
+        <form class="userAdress">
+            <span class="userAdressTItle">Адрес доставки</span>
+            <div class="addAdress">
+                <div class="addAdressChil">
+                    <label for="">Город</label>
+                    <select name="" id="">
+                        <option value="">Xorazm</option>
+                    </select>
+                </div>
+                <div class="addAdressChil">
+                    <label for="">Район</label>
+                    <select name="" id="">
+                        <option value="">Urganch</option>
+                        <option value="">Xiva</option>
+                        <option value="">Shovot</option>
+                        <option value="">Xonqa</option>
+                        <option value="">Bog'ot</option>
+                        <option value="">Yangi Ariq</option>
+                        <option value="">Gurlan</option>
+                    </select>
+                </div>
+                <div class="addAdressChil">
+                    <label for="">Дом</label>
+                    <input type="text">
+                </div>
+                <div class="addAdressChil">
+                    <label for="">Подъезд</label>
+                    <input type="text">
+                </div>
+                <div class="addAdressChil">
+                    <label for="">Этаж</label>
+                    <input type="text">
+                </div>
+                <div class="addAdressChil">
+                    <label for="">Квартира</label>
+                    <input type="text">
+                </div>
+                <div class="addAdressChil">
+                    <label for="">Пароль домофона</label>
+                    <input type="text">
+                </div>
+            </div>
+            <button type="submit" class="userAdressSave">Save</button>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class="userProfil">
+    <div class="userProfilLeft">
+        <a href=""><button class="activeProfil"><i class="fa-solid fa-user"></i><span>Персональная данные</span></button></a>
+        <a href="{% url 'users:myproduct' %}"><button><i class="fa-solid fa-box"></i><span>Мои заказы</span></button></a>
+        <a href="{% url 'users:mylocation' %}"><button><i class="fa-solid fa-truck-fast"></i><span>дрес доставки</span></button></a>
+        <a href=""><button><i class="fa-solid fa-right-from-bracket fa-rotate-180" style="color: red; background: rgba(255, 0, 0, 0.168);"></i><span>Выйти из профиля</span></button></a>
+    </div>
+    <form class="userInfos">
+        <span class="userInfos_Title">Персональная данные</span>
+        <div class="inInfos">
+            <div class="inInfosChil">
+                <label for="">Ism</label>
+                <input type="text" placeholder="ism">
+            </div>
+            <div class="inInfosChil">
+                <label for="">Familya</label>
+                <input type="text" placeholder="Familya">
+            </div>
+            <div class="inInfosChil">
+                <label for="">Tug'ulgan Sana</label>
+                <input type="date" placeholder="Tug'ilgan Sana">
+            </div>
+            <div class="inInfosChil">
+                <label for="">Email</label>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="inInfosChil">
+                <label for="">Jins</label>
+                <select class="inInfosChil">
+                    <option value disabled hidden></option>
+                    <option value="">Erkak</option>
+                    <option value="">Ayol</option>
+                    <option value="">Gey</option>
+                </select>
+            </div>
+            <div class="inInfosChil">
+                <label for="">Telfon</label>
+                <input type="tel" placeholder="+998 91 943 33 33">
+            </div>
+        </div>
+        <button type="submit" class="userInfosSaveBtn">Save</button>
+    </form>
+</div>
+
+{% endblock content %}
+
