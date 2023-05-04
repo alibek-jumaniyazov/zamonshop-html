@@ -238,6 +238,7 @@ p {
         box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.2);
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
+        z-index:9999999;
     }
     .mobilResponsiveDivs{
         display: flex;
@@ -245,6 +246,7 @@ p {
         justify-content: center;
         align-items: center;
         gap: 5px;
+
     }
     .mobilResponsiveDivs p{
         font-weight: 600;
