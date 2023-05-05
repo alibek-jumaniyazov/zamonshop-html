@@ -241,14 +241,13 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 106%;
         gap: 15px;
     }
     .mobilNav1Div{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 10px;
         width: 100%;
     }
     .mobilNav2Div{

@@ -170,7 +170,7 @@ p {
     align-items: center;
     justify-content: center;
     width: 1200px!important;
-    height: 550px!important;
+    height: 500px!important;
 }
 @media screen and (max-width: 414px) and (min-width: 360px) {
     .container{
@@ -189,6 +189,7 @@ p {
         align-items: center;
         justify-content: center;
         width: 100%!important;
+        height: auto!important;
     }
     .productInfo h1{
         font-size: 17px;
