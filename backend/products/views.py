@@ -1,11 +1,14 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.contrib.auth.decorators import login_required
+
 
 from rest_framework import generics
 from rest_framework import viewsets
 
 
-from .models import Category, Subcategory, Product
+from .models import Basket, Category, Subcategory, Product
 from .serializers import CategorySerializer, SubcategorySerializer, ProductSerializer
 
 
@@ -18,6 +21,44 @@ def product(request):
 
 def productCategory(request):
     return render(request, "products/productsCategory.html")
+
+
+@login_required
+def basket(request):
+
+    baskets = Basket.objects.filter(user=request.user)
+    context = {
+        "baskets": baskets,
+        "total_sum": sum(basket.sum() for basket in baskets),
+        "total_quantity": sum(basket.quantity for basket in baskets),
+    }
+
+    return render(request, 'products/basket.html', context)
+
+
+
+@login_required
+def basket_add(request, product_id):
+    product = Product.objects.get(id=product_id)
+    baskets = Basket.objects.filter(user=request.user, product=product)
+
+    if not baskets.exists():
+        Basket.objects.create(user=request.user, product=product, quantity=1)
+    else:
+        basket = baskets.first()
+        basket.quantity += 1
+        basket.save()
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+
+@login_required
+def basket_remove(request, basket_id):
+
+    basket = Basket.objects.get(id=basket_id)
+    basket.delete()
+
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
 
 
 
@@ -44,8 +85,6 @@ class SubcategoryViewSet(viewsets.ModelViewSet):
 class SubcategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Subcategory.objects.all()
     serializer_class = SubcategorySerializer
-
-
 
 
 class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
