@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-&dyr#%qo_@3!am-)!=5ih&gv%kh&!+28fbi7f1k7#=kymg=%hy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["zamonshop.uz", "www.zamonshop.uz", "127.0.0.1", ".zamonshop.uz"]
 
 
 # Application definition
