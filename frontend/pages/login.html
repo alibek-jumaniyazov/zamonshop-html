@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/order.css">
+    <link rel="stylesheet" href="../style/savat.css">
+    <link rel="stylesheet" href="../style/register.css">
+    <title>Zamonshop</title>
+</head>
+
+<body>
+
+
+    <div class="register">
+
+        <div class="registerBox">
+            <div class="{% if messages %} orangemassageBar {% else %} redmassageBar {% endif %}">
+                <p></p>
+            </div>
+            <span class="registerBoxTitle">Входить</span>
+            <form method="POST">
+                <div class="registerInputs">
+                    <div class="registerInputsChil">
+                        <label for="">Отправим смс с кодом подтверждения</label>
+                        <div class="registerInputsChilInput">
+                            <p class="telTitle">+998</p>
+                            <input name="phone_number" type="text" placeholder="00 000-00-00">
+                        </div>
+                    </div>
+                </div>
+                <div class="registerFooter">
+                    <div class="registerFooterLoginNext">
+                        <span>Создавать аккаунт</span><a href="">Регистрация</a>
+                    </div>
+                    <button >Получить код</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -3,22 +3,29 @@
 {% block content %}
 
 <div class="register">
+    <div class="registerBox ">
 
-    <div class="registerBox">
         <div class="{% if messages %} orangemassageBar {% else %} redmassageBar {% endif %}">
             <p></p>
         </div>
-        <span class="registerBoxTitle">Введите код</span>
+
+        <span class="registerBoxTitle">Вход / Регистрация</span>
         <form method="POST">
             <div class="registerInputs">
                 <div class="registerInputsChil">
-                    <label style="width: 328px;" for="">Для подтверждения телефона отправили 4-значный код на +998
-                        91 437-37-90</label>
+                    <label for="">Введите имя</label>
                     <div class="registerInputsChilInput">
-                        <input name="otp" type="number">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="user">
                     </div>
                 </div>
-
+                <div class="registerInputsChil">
+                    <label for="">Пароль</label>
+                    <div class="registerInputsChilInput">
+                        <img src="../images/lock.svg" alt="">
+                        <input type="password">
+                    </div>
+                </div>
             </div>
             <div class="registerFooter">
                 <div class="registerFooterLoginNext">
@@ -29,4 +36,5 @@
         </form>
     </div>
 </div>
+
 {% endblock content %}
