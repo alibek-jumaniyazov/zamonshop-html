@@ -30,33 +30,33 @@
             <nav class="nav2">
                 <div class="mobilNav1Div">
                     <a href="{% url 'home:home' %}"><img src="{% static 'images/image.svg' %}" alt="" class="logo"></a>
-                 <div class="users">
-                    <div class="accaunt">
-                        <i class="fa-solid fa-user" style="color: #000000;"></i>
-                        <!-- <span>Kirish</span> -->
-                    </div>
-                    <a href="{% url 'orders:savat' %}">
+                    <div class="users">
                         <div class="accaunt">
-                            <i class="fa-sharp fa-solid fa-cart-shopping" style="color: #000000;"></i>
-                            <!-- <span>Savat</span> -->
-                            <p>0</p>
+                            <i class="fa-solid fa-user" style="color: #000000;"></i>
+                            <!-- <span>Kirish</span> -->
                         </div>
-                    </a>
-                </div>
-                </div>
-               <div class="mobilNav1Div">
-                <div class="kategoriSearch">
-                    <div class="kategori">
-                        <img src="{% static 'images/Frame.svg' %}" alt="">
-                    </div>
-                    <div class="searchDiv">
-                        <input type="text">
-                        <div class="searchIcon">
-                            <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
-                        </div>
+                        <a href="{% url 'orders:savat' %}">
+                            <div class="accaunt">
+                                <i class="fa-sharp fa-solid fa-cart-shopping" style="color: #000000;"></i>
+                                <!-- <span>Savat</span> -->
+                                <p>0</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-               </div>
+                <div class="mobilNav1Div">
+                    <div class="kategoriSearch">
+                        <div class="kategori">
+                            <img src="{% static 'images/Frame.svg' %}" alt="">
+                        </div>
+                        <div class="searchDiv">
+                            <input type="text">
+                            <div class="searchIcon">
+                                <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </nav>
 
@@ -107,30 +107,30 @@
 
                     <ul class="kategoriList">
                         {% for cat in category %}
-                            <li class="kategoriItem" data-target="{{cat.name}}">{{cat.name}}</li>
+                        <li class="kategoriItem" data-target="{{cat.name}}">{{cat.name}}</li>
                         {% endfor %}
 
                     </ul>
 
                     {% for cat in category %}
-                        <section id="{{cat.name}}">
-                            {% for chill in cat.children.all %}
-                                <div class="items">
+                    <section id="{{cat.name}}">
+                        {% for chill in cat.children.all %}
+                        <div class="items">
 
-                                    <div class="">
-                                        <p>{{chill.name}}</p>
+                            <div class="">
+                                <p>{{chill.name}}</p>
 
-                                        <div class="plar">
-                                            {% for n in chill.children.all %}
-                                            <p>{{n.name}}</p>
-                                            {% endfor %}
-                                        </div>
-
-                                    </div>      
-                                    
+                                <div class="plar">
+                                    {% for n in chill.children.all %}
+                                    <p>{{n.name}}</p>
+                                    {% endfor %}
                                 </div>
-                            {% endfor %}
-                        </section>
+
+                            </div>
+
+                        </div>
+                        {% endfor %}
+                    </section>
                     {% endfor %}
 
                     <section id="Settings">
@@ -144,7 +144,7 @@
                 </div>
             </div>
             <script>
-                const kategoriBtn = document.querySelector(".mobilNav1Div .kategoriSearch .kategori")
+                const kategoriBtn = document.querySelector(".nav1 .kategoriSearch .kategori")
                 const kategori = document.querySelector(".kategoriDiv")
 
                 kategoriBtn.onclick = function () {
@@ -168,27 +168,35 @@
                     document.getElementById(target).classList.add('visible')
                     currentPage = target
                 }
-     
+
                 showPage('Home')
             </script>
         </header>
         <div class="mobilResponsive">
-            <div class="mobilResponsiveDivs">
-                <img src="{% static 'images/home.svg' %}" alt="">
-                <p>Главная</p>
-            </div>
-            <div class="mobilResponsiveDivs">
-                <img width="25px" src="{% static 'images/heart.svg' %}" alt="">
-                <p>Избранное</p>
-            </div>
-            <div class="mobilResponsiveDivs">
-                <img src="{% static 'images/shopping-cart.svg' %}" alt="">
-                <p>Корзина</p>
-            </div>
-            <div class="mobilResponsiveDivs">
-                <img src="{% static 'images/user.svg' %}" alt="">
-                <p>Asadbek</p>
-            </div>
+            <a href="{% url 'home:home' %}">
+                <div class="mobilResponsiveDivs">
+                    <img src="{% static 'images/home.svg' %}" alt="">
+                    <p>Главная</p>
+                </div>
+            </a>
+            <a href="{% url 'orders:savat' %}">
+                <div class="mobilResponsiveDivs">
+                    <img width="25px" src="{% static 'images/heart.svg' %}" alt="">
+                    <p>Избранное</p>
+                </div>
+            </a>
+            <a href="{% url 'orders:savat' %}">
+                <div class="mobilResponsiveDivs">
+                    <img src="{% static 'images/shopping-cart.svg' %}" alt="">
+                    <p>Корзина</p>
+                </div>
+            </a>
+            <a href="{% url 'orders:savat' %}">
+                <div class="mobilResponsiveDivs">
+                    <img src="{% static 'images/user.svg' %}" alt="">
+                    <p>Asadbek</p>
+                </div>
+            </a>
         </div>
         {% block content %}
 
@@ -245,62 +253,62 @@
                 </div>
 
 
-    </footer>
-    
-    <footer class="footer2">
-        <div class="footerDiv2">
-            <div class="footerDiv">
-                <p>Bog'lanish
-                <div class="hr"></div>
-                </p>
+        </footer>
 
-                <div class="footerInfo">
-                    <span>+998943614656</span>
-                    <span>Asadbek Abdullayev</span>
+        <footer class="footer2">
+            <div class="footerDiv2">
+                <div class="footerDiv">
+                    <p>Bog'lanish
+                    <div class="hr"></div>
+                    </p>
+
+                    <div class="footerInfo">
+                        <span>+998943614656</span>
+                        <span>Asadbek Abdullayev</span>
+                    </div>
+                </div>
+
+                <div class="footerDiv">
+                    <p>Kompaniya
+                    <div class="hr"></div>
+                    </p>
+                    <div class="footerInfo">
+                        <span>Biz haqimizda </span>
+                        <span>Bizning hizmatlar</span>
+                        <span>Bizning hizmatlar</span>
+                        <span>Xavfsizlik</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="footerDiv">
-                <p>Kompaniya
-                <div class="hr"></div>
-                </p>
-                <div class="footerInfo">
-                    <span>Biz haqimizda </span>
-                    <span>Bizning hizmatlar</span>
-                    <span>Bizning hizmatlar</span>
-                    <span>Xavfsizlik</span>
+            <div class="footerDiv2">
+                <div class="footerDiv">
+                    <p>Yordam 24/7
+                    <div class="hr"></div>
+                    </p>
+                    <div class="footerInfo">
+                        <span>FAQ</span>
+                        <span>Telegram yordam</span>
+                        <span>returns</span>
+                        <span>+998943614656</span>
+                        <span>To'lov usullari</span>
+                    </div>
+                </div>
+
+                <div class="footerDiv">
+                    <p>Bog'lanish
+                    <div class="hr"></div>
+                    </p>
+                    <div class="footerIcon">
+                        <i class="fa-brands fa-telegram"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="footerDiv2">
-            <div class="footerDiv">
-                <p>Yordam 24/7
-                <div class="hr"></div>
-                </p>
-                <div class="footerInfo">
-                    <span>FAQ</span>
-                    <span>Telegram yordam</span>
-                    <span>returns</span>
-                    <span>+998943614656</span>
-                    <span>To'lov usullari</span>
-                </div>
-            </div>
-
-            <div class="footerDiv">
-                <p>Bog'lanish
-                <div class="hr"></div>
-                </p>
-                <div class="footerIcon">
-                    <i class="fa-brands fa-telegram"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </div>
-            </div>
-        </div>
-
-    </footer>
+        </footer>
     </div>
 </body>
 
