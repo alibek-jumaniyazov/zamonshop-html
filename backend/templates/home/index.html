@@ -1,9 +1,8 @@
 {% extends 'home/base.html' %}
-{% load static %}   
+{% load static %}
 {% block content %}
 
-
-<div class="kategoriDiv">
+<!--<div class="kategoriDiv">
     <div class="kategoriListes">
         
         <ul class="kategoriList">
@@ -72,8 +71,8 @@
     }
 
     showPage('Home')
-</script>
-    <!-- Main qismi -->
+</script>-->
+    <!-- Main qismi --> 
     <main>
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -84,687 +83,699 @@
                 {% endfor %}
                 {% comment %} <div class="carousel-item">
                     <img src="{% static 'images/1.a742c0f72d4bfa03a98a.png.svg' %}" class="d-block w-100" alt="">
-                </div> {% endcomment %}
+                </div> {% endcomment %}>
+<!-- Main qismi -->
+<main>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {% for ban in banner %}
+            <div class="carousel-item active">
+                <img src="{{ban.image.url}}" class="d-block w-100" alt="">
             </div>
+            {% endfor %}
+            {% comment %} <div class="carousel-item">
+                <img src="{% static 'images/1.a742c0f72d4bfa03a98a.png.svg' %}" class="d-block w-100" alt="">
+            </div> {% endcomment %}
         </div>
+    </div>
 
 
 
-        <div class="productInfo">
-            <h1>Ko'p sotilganlar <img src="../images/Vector.svg" alt=""></h1>
+    <div class="productInfo">
+        <h1>Ko'p sotilganlar <img src="../images/Vector.svg" alt=""></h1>
 
-            <!-- Mahsulotlar -->
+        <!-- Mahsulotlar -->
 
-            <div class="Products">
+        <div class="Products">
 
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
                     </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
 
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
                         <a href="{% url 'products:detail' %}">
                             <div class="korish">
                                 <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
                             </div>
                         </a>
-                        </div>
                     </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-        <div class="productInfo">
-            <h1>Ayollar uchun <img src="../images/Vector.svg" alt=""></h1>
-
-            <!-- Mahsulotlar -->
-
-            <div class="Products">
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../images/1.a742c0f72d4bfa03a98a.png.svg" class="d-block w-100" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="../images/1.a742c0f72d4bfa03a98a.png.svg" class="d-block w-100" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="../images/1.a742c0f72d4bfa03a98a.png.svg" class="d-block w-100" alt="">
                 </div>
             </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-        <div class="productInfo">
-            <h1>Ko'p sotilganlar <img src="../images/Vector.svg" alt=""></h1>
+    </div>
 
-            <!-- Mahsulotlar -->
+    <div class="productInfo">
+        <h1>Ayollar uchun <img src="../images/Vector.svg" alt=""></h1>
 
-            <div class="Products">
+        <!-- Mahsulotlar -->
 
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
+        <div class="Products">
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
                     </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
 
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
                     </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
 
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
                     </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
 
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
                     </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
 
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
                     </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
 
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
                     </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
 
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
                     </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
 
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
+        </div>
+    </div>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../images/1.a742c0f72d4bfa03a98a.png.svg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="../images/1.a742c0f72d4bfa03a98a.png.svg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="../images/1.a742c0f72d4bfa03a98a.png.svg" class="d-block w-100" alt="">
             </div>
         </div>
+    </div>
+    <div class="productInfo">
+        <h1>Ko'p sotilganlar <img src="../images/Vector.svg" alt=""></h1>
 
+        <!-- Mahsulotlar -->
 
+        <div class="Products">
 
-        <div class="productInfo">
-            <h1>Ayollar uchun <img src="../images/Vector.svg" alt=""></h1>
-
-            <!-- Mahsulotlar -->
-
-            <div class="Products">
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
                     </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
 
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
                         </div>
                     </div>
                 </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-                        <div class="Productkarzina">
-                            <p>Savatga</p>
-                        </div>
-                    </div>
-                    <div class="poductInfo">
-                        <p class="name">Chanel #112</p>
-
-                        <div class="sum">
-                            <p class="hozirgi">999 000 so'm</p>
-                            <div class="korish">
-                                <p>Mahsulotni ko'rish</p>  <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-    </main>
+    </div>
 
-    <!-- Main Qismi Tugashi -->
 
-    <script>
-        $('.carousel-item').carousel({
-            interval: 1000 * 1
-        });
-    </script>
+
+    <div class="productInfo">
+        <h1>Ayollar uchun <img src="../images/Vector.svg" alt=""></h1>
+
+        <!-- Mahsulotlar -->
+
+        <div class="Products">
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img">
+                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
+                    <div class="Productkarzina">
+                        <p>Savatga</p>
+                    </div>
+                </div>
+                <div class="poductInfo">
+                    <p class="name">Chanel #112</p>
+
+                    <div class="sum">
+                        <p class="hozirgi">999 000 so'm</p>
+                        <div class="korish">
+                            <p>Mahsulotni ko'rish</p> <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</main>
+
+<!-- Main Qismi Tugashi -->
+
+<script>
+    $('.carousel-item').carousel({
+        interval: 1000 * 1
+    });
+</script>
 {% endblock content %}
