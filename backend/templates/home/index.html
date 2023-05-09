@@ -2,6 +2,77 @@
 {% load static %}   
 {% block content %}
 
+
+<div class="kategoriDiv">
+    <div class="kategoriListes">
+        
+        <ul class="kategoriList">
+            {% for cat in categories %}
+            <li class="kategoriItem" data-target="{{cat.category.name}}">{{cat.category.name}}</li>
+            
+            {% comment %} <li class="kategoriItem" data-target="Settings">Setting</li>
+            <li class="kategoriItem" data-target="about">About</li> {% endcomment %}
+            {% endfor %}
+        </ul>
+
+        {% for cat in categories %}
+        <section id="{{cat}}">
+
+            <div class="items">
+
+                <div class="">
+                    {% for i in cat.parent.all %}
+                        <p>{{i.name}}</p>
+                    {% endfor %}
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+        {% endfor %}
+
+
+        <section id="Settings">
+            <h1> Settings </h1>
+        </section>
+
+        <section id="about">
+            <h1> About </h1>
+        </section>
+
+    </div>
+</div>
+<script>
+    const kategoriBtn = document.querySelector(".kategori")
+    const kategori = document.querySelector(".kategoriDiv")
+
+    kategoriBtn.onclick = function () {
+        kategori.classList.toggle('addKategori')
+    }
+
+    const liArray = document.querySelectorAll('li')
+
+    let currentPage = ''
+
+    liArray.forEach(li => {
+        li.onmouseover = (event) => {
+            const target = li.getAttribute('data-target')
+            showPage(target)
+        }
+    })
+
+    function showPage(target) {
+        console.log(target);
+        document.getElementById(currentPage)?.classList.remove('visible')
+        document.getElementById(target).classList.add('visible')
+        currentPage = target
+    }
+
+    showPage('Home')
+</script>
     <!-- Main qismi -->
     <main>
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
