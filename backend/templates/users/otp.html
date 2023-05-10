@@ -1,32 +1,40 @@
-{% extends 'home/base.html' %}
+{% extends 'users/base.html' %}
+
 {% load static %}
 {% block content %}
+    <div class="register">
 
-<div class="register">
-
-    <div class="registerBox">
-        <div class="{% if messages %} orangemassageBar {% else %} redmassageBar {% endif %}">
-            <p></p>
-        </div>
-        <span class="registerBoxTitle">Введите код</span>
-        <form method="POST">
-            <div class="registerInputs">
-                <div class="registerInputsChil">
-                    <label style="width: 328px;" for="">Для подтверждения телефона отправили 4-значный код на +998
-                        91 437-37-90</label>
-                    <div class="registerInputsChilInput">
-                        <input name="otp" type="number">
+        <div class="registerBox">
+            {% if messages or form.non_field_errors %}
+                <div class="{% if messages %} orangemassageBar {% else %} redmassageBar {% endif %}">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            {% else %}
+                {{ form.non_field_errors }}
+            {% endif %}
+            <span class="registerBoxTitle">Введите код</span>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="registerInputs">
+                    <div class="registerInputsChil">
+                        <label style="width: 328px;" for="">Для подтверждения телефона отправили 4-значный код на +998 91 437-37-90</label>
+                        <div class="registerInputsChilInput">
+                            <input name="otp" type="number" >
+                        </div>
                     </div>
                 </div>
-
-            </div>
-            <div class="registerFooter">
-                <div class="registerFooterLoginNext">
-                    <span>Создавать аккаунт</span><a href="{% url 'users:registration' %}">Регистрация</a>
+                <div class="registerFooter">
+                    <div class="registerFooterLoginNext">
+                        <span>Создавать аккаунт</span><a href="{% url 'users:registration' %}">Регистрация</a>
+                    </div>
+                    <button type="submit">Входить</button>
                 </div>
-                <button type="submit">Входить</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
 {% endblock content %}
+
