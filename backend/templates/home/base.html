@@ -181,10 +181,10 @@
                 <img width="25px" src="{% static 'images/heart.svg' %}" alt="">
                 <p>Избранное</p>
             </div>
-            <div class="mobilResponsiveDivs">
+            <a href="{% url 'home:chat' %}"><div class="mobilResponsiveDivs">
                 <img width="25px" src="{% static 'images/operator.svg' %}" alt="">
                 <p>Operator</p>
-            </div>
+            </div></a>
             <div class="mobilResponsiveDivs">
                 <img src="{% static 'images/shopping-cart.svg' %}" alt="">
                 <p>Корзина</p>

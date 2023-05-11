@@ -17,4 +17,8 @@ def index(request):
 
     return render(request, 'home/index.html', context)
     
-    
+
+def chat(request):
+
+    return render(request, 'chat/chat.html')
+
