@@ -41,7 +41,7 @@ def is_valid_uzbek_phone_number(phone_number):
 
 
 
-@login_required
+# @login_required
 def profil(request):
     if request.method == 'POST':
         form = UserProfileForm(instance=request.user, data=request.POST, files=request.FILES)
