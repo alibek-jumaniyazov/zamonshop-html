@@ -42,7 +42,7 @@
 
 .gorod {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 25px;
     flex-wrap: wrap;
@@ -102,13 +102,6 @@
 }
 
 @media screen and (max-width: 414px) and (min-width: 360px) {
-    .selects input{
-        width: 100%;
-    }
-    .zakazBtn{
-        width: 168px;
-        height: 40px;
-    }
     .Orders {
         display: flex;
         flex-direction: column;
@@ -121,9 +114,10 @@
     }
     .zakaz{
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
     }
     .gorod{
         display: flex;
@@ -136,13 +130,5 @@
     }
     .addZakazBtn{
         width: 100%;
-    }
-    .Orders h1{
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-        color: #3C3C3C;
-        width: 264px;
-        height: 19px;
     }
 }

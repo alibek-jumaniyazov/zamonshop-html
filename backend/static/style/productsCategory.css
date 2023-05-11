@@ -36,20 +36,19 @@
 
 .selects {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
 }
 
-.selectss span {
+.selects span {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: rgba(98, 101, 106, 0.87);
 }
 
-.selectss select {
+.selects select {
     height: 40px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -58,7 +57,7 @@
     width: 220px;
 }
 
-.selectss select option {
+.selects select option {
     font-weight: 400;
     font-size: 14.4px;
     line-height: 40px;
