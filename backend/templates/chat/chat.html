@@ -1,34 +1,51 @@
 {% extends 'home/base.html' %}
-
+{% load static %}
 {% block content %}
 
 <div class="chat">
     <div class="chatHeader">
         <div class="chatHeaderLeft">
-            <img src="zamonuz" alt="">
+            <img src="{% static 'images/image.svg' %}" alt="">
             <span>Support</span>
         </div>
         <div class="chatHeaderRight">
-            <button>Close</button>
+            <a href="/"><button><img style="width: 20px;" src="{% static 'images/close.svg' %}" alt=""></button></a>
         </div>
     </div>
     <div class="chatMain">
         <div class="adminMassage">
             <div class="massageInfo">
-                <span>May 2022 18:93</span>
+                <span class="chatuserName">ZamonShop</span>
+                <span>May, 18:93, 2022 </span>
             </div>
-            <span>Salom</span>
+            <span class="mass">Salom</span>
         </div>
         <div class="userMassage">
             <div class="massageInfo">
-                <span>May 2022 18:97</span>
+                <span class="chatuserName">You</span>
+                <span>May, 18:93, 2022 </span>
             </div>
-            <span>Alik</span>
+            <span class="mass">Alik</span>
+        </div>
+        <div class="adminMassage">
+            <div class="massageInfo">
+                <span class="chatuserName">ZamonShop</span>
+                <span>May, 18:93, 2022 </span>
+            </div>
+            <span class="mass">Men Asatbekman savolinggiz bo'lsa bering</span>
+        </div>
+        <div class="userMassage">
+            <div class="massageInfo">
+                <span class="chatuserName">You</span>
+                <span>May, 18:93, 2022 </span>
+            </div>
+            <span class="mass">Ok</span>
         </div>
     </div>
     <div class="chatBottom">
         <div class="sendMassage">
             <input type="text" placeholder="Xabar Yozing!">
+            <button><img style="width: 30px;" src="{% static 'images/send.svg' %}" alt=""></button>
         </div>
     </div>
 </div>
