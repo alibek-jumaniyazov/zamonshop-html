@@ -1,18 +1,1 @@
-[
-    {
-        "model": "home.banner",
-        "pk": 1,
-        "fields": {
-            "title": "cadilac",
-            "image": "banner/2023/05/04/b98b2b1f-d461-49a1-b010-b6d1f0dbb42e-cover.png"
-        }
-    },
-    {
-        "model": "home.banner",
-        "pk": 2,
-        "fields": {
-            "title": "adsfa",
-            "image": "banner/2023/05/04/photo_2023-03-23_16-31-22.jpg"
-        }
-    }
-]
+[{"model": "home.banner", "pk": 1, "fields": {"title": "1-img", "image": "banner/2023/05/12/zamon.png"}}, {"model": "home.banner", "pk": 2, "fields": {"title": "2-img", "image": "banner/2023/05/12/zamon_2Oc0GfA.png"}}]
