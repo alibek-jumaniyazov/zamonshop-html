@@ -1,14 +1,17 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 .productPage {
-    width: 1200px;
-    margin: 0 auto;
+    width: 1150px;
+    margin: 30px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: 'Roboto';
 
+}
+
+:root {
+    --add: #FFA500;
 }
 
 .productPage_Info {
@@ -170,7 +173,7 @@
 .btnsHator span {
     width: 298.8px;
     height: 56px;
-    background: #7000FF;
+    background: var(--add);
     border-radius: 12px;
     font-weight: 600;
     font-size: 16px;
@@ -189,7 +192,7 @@
     width: 298.8px;
     height: 56px;
     background: rgba(255, 255, 255, 0.002);
-    box-shadow: inset 0px 0px 0px 1px #7000FF;
+    box-shadow: inset 0px 0px 0px 1px var(--add);
     border-radius: 12px;
     font-weight: 600;
     font-size: 16px;
@@ -198,17 +201,209 @@
     align-items: center;
     justify-content: center;
     letter-spacing: 0.064px;
-    color: #7000FF;
+    color: var(--add);
     cursor: pointer;
     transition: all 0.4s ease;
 
 }
-.btnsHator p:active{
+
+.btnsHator p:active {
     scale: 70%;
     transition: all 0.4s ease;
 }
 
-.btnsHator span:active{
+.btnsHator span:active {
     scale: 70%;
     transition: all 0.4s ease;
+}
+
+.productImgInfo {
+    height: 554.1400146484375px;
+    width: 416px;
+}
+
+.productImages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 554.1400146484375px;
+    overflow-y: scroll;
+    gap: 8px;
+}
+
+.productImgInfo_mini {
+    height: 112.5199966430664px;
+    width: 84.38999938964844px;
+    border-radius: 2px;
+}
+
+.productPage_Img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FF7010;
+    border-radius: 10%;
+}
+
+.productPage_Image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.boshTitle {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 12px;
+    color: #000000;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.mobilFooterKarzina {
+    display: none;
+}
+
+@media screen and (max-width: 414px) and (min-width: 360px) {
+    .productPage {
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 40px;
+    }
+
+    .productImgInfo_mini {
+        height: 75.66999816894531px;
+        width: 56.77000045776367px;
+    }
+
+    .productImgInfo {
+        height: 368.9800109863281px;
+        width: 277px;
+    }
+
+    .productImages {
+        height: 368.9800109863281px;
+    }
+
+    .boshTitle {
+        width: 100%;
+    }
+
+    .productPage_Info {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .ballHator {
+        padding-right: 20px;
+    }
+
+    .ballHator p {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #62656A;
+    }
+
+    .likee {
+        display: none !important;
+    }
+
+    .sotuvchi {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .yetkazish {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .harxHator {
+        display: none;
+
+    }
+
+    .btnsHator {
+        display: none;
+    }
+
+    .mobilFooterKarzina {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        height: 61px;
+        width: 100%;
+        z-index: 99999999999999;
+        background-color: #FFA500;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .mobilresponsiveBtn {
+        padding: 9px 42.4px 9px 42.68px;
+        height: 36px;
+        background: #ffffff;
+        border-radius: 10px;
+        height: 36px;
+        width: 140.0800018310547px;
+        color: #FFA500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.084px;
+    }
+
+    .mobilResponsiveNarx {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .mobilResponsiveNarx span {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 9px;
+        color: white;
+    }
+
+    .mobilResponsiveNarx p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 9px;
+        color: white;
+    }
 }
