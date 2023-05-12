@@ -48,7 +48,7 @@
 {% endblock content %}
  {% endcomment %}
 
- {% block content %}
+{% block content %}
     <div class="register">
 
         <div class="registerBox">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="registerFooter">
                     <div class="registerFooterLoginNext">
-                        <span>Создавать аккаунт</span><a href="{% url 'users:registration' %}">Регистрация</a>
+                        <span>Создавать аккаунт</span><a href="{% url 'users:register' %}">Регистрация</a>
                     </div>
                     <button type="submit">Получить код</button>
                 </div>

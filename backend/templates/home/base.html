@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{% static 'style/style.css' %}">
     <link rel="stylesheet" href="{% static 'style/savat.css' %}">
     <link rel="stylesheet" href="{% static 'style/order.css' %}">
+    <link rel="stylesheet" href="{% static 'style/register.css' %}">
     <link rel="stylesheet" href="{% static 'style/profil.css' %}">
     <link rel="stylesheet" href="{% static 'style/products.css' %}">
     <link rel="stylesheet" href="{% static 'style/productsCategory.css' %}">
@@ -77,10 +78,18 @@
                     </div>
                 </div>
                 <div class="users">
-                    <div class="accaunt">
+                    {% if user.is_authentificated %}
+                    <a href="{% url 'users:profile' %}"><div class="accaunt">
                         <i class="fa-solid fa-user" style="color: #000000;"></i>
-                        <span>Kirish</span>
-                    </div>
+                            <span>{{user.username}}</span>
+                    </div></a>
+
+                    {% else %}
+                    <a href="{% url 'users:login' %}"><div class="accaunt">
+                        <i class="fa-solid fa-user" style="color: #000000;"></i>
+                            <span>Kirish</span>
+                        </div></a>
+                    {% endif %}
                     <a href="{% url 'orders:savat' %}">
                         <div class="accaunt">
                             <i class="fa-sharp fa-solid fa-cart-shopping" style="color: #000000;"></i>

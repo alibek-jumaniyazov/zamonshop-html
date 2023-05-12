@@ -1,4 +1,4 @@
-{% extends 'users/base.html' %}
+{% extends 'home/base.html' %}
 
 {% load static %}
 {% block content %}
@@ -29,7 +29,7 @@
                 </div>
                 <div class="registerFooter">
                     <div class="registerFooterLoginNext">
-                        <span>Создавать аккаунт</span><a href="{% url 'users:registration' %}">Регистрация</a>
+                        <span>Создавать аккаунт</span><a href="{% url 'users:register' %}">Регистрация</a>
                     </div>
                     <button type="submit">Входить</button>
                 </div>

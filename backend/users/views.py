@@ -41,7 +41,7 @@ def is_valid_uzbek_phone_number(phone_number):
 
 
 
-# @login_required
+@login_required
 def profil(request):
     if request.method == 'POST':
         form = UserProfileForm(instance=request.user, data=request.POST, files=request.FILES)
@@ -81,7 +81,7 @@ def login_view(request):
         
             profile = Profile.objects.filter(phone_number=phone_number).first()
             if not profile:
-                return HttpResponseRedirect(reverse('users:registration'))
+                return HttpResponseRedirect(reverse('users:register'))
 
 
             session = SessionStore(request.session.session_key)
@@ -117,7 +117,7 @@ def login_view(request):
 
 def logout_view(request):
     auth.logout(request)
-    return HttpResponseRedirect(reverse("users:login"))
+    return HttpResponseRedirect(reverse("home:homepage"))
 
 
 def registration(request):
@@ -140,6 +140,22 @@ def registration(request):
 
 
     return render(request, 'users/registration.html')
+
+
+def otp(request, uid):
+    if request.method == "POST":
+        otp = request.POST.get('otp')
+        profile = Profile.objects.get(uid = uid)
+        if otp == profile.otp:
+            auth.login(request, profile.user)
+            return HttpResponseRedirect(reverse('users:profile'))
+        
+        return redirect(f'/users/otp/{uid}')
+    return render(request, 'users/otp.html')
+
+
+
+
 
 # class UserSet(viewsets.ModelViewSet):
 #     queryset = User.objects.all()

@@ -25,10 +25,16 @@ urlpatterns = [
 
     path('token/', views.MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('register/', views.RegisterView.as_view(), name='auth_register'),
-    path('', views.profil , name="users"),
+
+    path('register/', views.registration, name='register'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout, name='logout'),
+    path('profile/', views.profil, name='profile'),
+    path("otp/<uid>/", views.otp, name="otp"),
+
     path('myproduct/', views.myproduct, name="myproduct"),
     path('mylocation/' , views.mylocation , name="mylocation"),
+    path('', views.profil , name="users"),
     
 ]
 
