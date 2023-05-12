@@ -1,14 +1,17 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 .productPage {
-    width: 1200px;
-    margin: 0 auto;
+    width: 1150px;
+    margin: 30px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: 'Roboto';
 
+}
+
+:root {
+    --add: #FFA500;
 }
 
 .productPage_Info {
@@ -170,7 +173,7 @@
 .btnsHator span {
     width: 298.8px;
     height: 56px;
-    background: #7000FF;
+    background: var(--add);
     border-radius: 12px;
     font-weight: 600;
     font-size: 16px;
@@ -189,7 +192,7 @@
     width: 298.8px;
     height: 56px;
     background: rgba(255, 255, 255, 0.002);
-    box-shadow: inset 0px 0px 0px 1px #7000FF;
+    box-shadow: inset 0px 0px 0px 1px var(--add);
     border-radius: 12px;
     font-weight: 600;
     font-size: 16px;
@@ -198,17 +201,72 @@
     align-items: center;
     justify-content: center;
     letter-spacing: 0.064px;
-    color: #7000FF;
+    color: var(--add);
     cursor: pointer;
     transition: all 0.4s ease;
 
 }
-.btnsHator p:active{
+
+.btnsHator p:active {
     scale: 70%;
     transition: all 0.4s ease;
 }
 
-.btnsHator span:active{
+.btnsHator span:active {
     scale: 70%;
     transition: all 0.4s ease;
+}
+
+.productImgInfo {
+    height: 554.1400146484375px;
+    width: 416px;
+}
+
+.productImages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 554.1400146484375px;
+    overflow-y: scroll;
+    gap: 8px;
+}
+
+.productImgInfo_mini {
+    height: 112.5199966430664px;
+    width: 84.38999938964844px;
+    border-radius: 2px;
+}
+
+.productPage_Img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FF7010;
+    border-radius: 10%;
+}
+
+.productPage_Image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.boshTitle {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 12px;
+    color: #000000;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
