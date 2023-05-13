@@ -8,7 +8,7 @@
         <div class="carousel-inner">
             {% for ban in banner %}
             <div class="carousel-item active">
-                <img src="{{ban.image.url}}" class="d-block w-100" alt="">
+                <img style="border-radius: 10px;" src="{{ban.image.url}}" class="d-block w-100" alt="">
             </div>
             {% endfor %}
             {% comment %} <div class="carousel-item">
@@ -17,7 +17,21 @@
         </div>
     </div>
 
-
+    <div class="resHeader">
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false"
+            space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-slide><a href=""><img src="https://s.alicdn.com/@img/imgextra/i3/O1CN01C3ATKV23zok8V3dzo_!!6000000007327-0-tps-486-816.jpg_640x640q80.jpg" alt=""></a></swiper-slide>
+            <swiper-slide><a href=""><img src="https://s.alicdn.com/@img/imgextra/i4/O1CN01UY02aB1RrcJarRZ5d_!!6000000002165-0-tps-486-816.jpg_640x640q80.jpg" alt=""></a></swiper-slide>
+        </swiper-container>
+        <div class="randomProd">
+            <div class="randomProdChil1">
+                <a href=""><img src="https://parfumstock.uz/thumb/2/JyrYNHSYqIGKNSj6dXFssw/r/d/11903267-9634679234726622.jpg" alt=""></a>
+            </div>
+            <div class="randomProdChil2">
+                <a href=""><img src="https://shopi.uz/wp-content/uploads/2022/10/1-18.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
 
     <div class="productInfo">
         <h1>Ko'p sotilganlar <img src="../images/Vector.svg" alt=""></h1>
@@ -628,7 +642,7 @@
 </main>
 
 <!-- Main Qismi Tugashi -->
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 <script>
     $('.carousel-item').carousel({
         interval: 1000 * 1
