@@ -34,21 +34,21 @@
     color: rgba(0, 0, 0, 0.87);
 }
 
-.selects {
+.selects2 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
 }
 
-.selects span {
+.selects2 span {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: rgba(98, 101, 106, 0.87);
 }
 
-.selects select {
+.selects2 select {
     height: 40px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -57,7 +57,7 @@
     width: 220px;
 }
 
-.selects select option {
+.selects2 select option {
     font-weight: 400;
     font-size: 14.4px;
     line-height: 40px;
