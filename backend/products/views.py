@@ -33,7 +33,7 @@ def basket(request):
         "total_quantity": sum(basket.quantity for basket in baskets),
     }
 
-    return render(request, 'products/basket.html', context)
+    return render(request, 'orders/savat.html', context)
 
 
 

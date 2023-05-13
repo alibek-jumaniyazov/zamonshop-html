@@ -36,7 +36,7 @@ class UserProfileForm(UserChangeForm):
     last_name = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Familiyangiz'}))
     username = forms.CharField(widget=forms.TextInput(attrs={
-        'placeholder': 'Username'}))
+        'placeholder': 'Ismingiz'}))
     email = forms.EmailField(widget=forms.TextInput(attrs={
         'placeholder': 'email'}))
     image = forms.ImageField(widget=forms.FileInput(attrs={

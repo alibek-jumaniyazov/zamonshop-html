@@ -4,7 +4,7 @@ import re
 from django.db import IntegrityError
 from django.forms import ValidationError
 
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.http import JsonResponse
@@ -117,7 +117,7 @@ def login_view(request):
 
 def logout_view(request):
     auth.logout(request)
-    return HttpResponseRedirect(reverse("home:homepage"))
+    return redirect("/")
 
 
 def registration(request):

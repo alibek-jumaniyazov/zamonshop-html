@@ -61,13 +61,11 @@ class Basket(models.Model):
 
     objects = BasketQuerySet.as_manager()
 
-
     def __str__(self) -> str:
         return f"{self.user.username} uchun Savat | Maxsulot: {self.product.name}"
         
     def sum(self):
         return self.product.price * self.quantity
-
 
     def de_json(self):
         basket_item = {

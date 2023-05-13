@@ -183,3 +183,6 @@ CORS_ALLOWED_ORIGINS = [
 
 
 
+LOGIN_URL = "/users/login/"
+LOGOUT_URL = "users/logout/"
+
