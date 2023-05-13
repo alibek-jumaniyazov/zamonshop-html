@@ -82,7 +82,7 @@ swiper-slide img {
 
 
 
-@media screen and (max-width: 380px) {
+/* @media screen and (max-width: 380px) {
     .product {
         width: 160px;
     }
@@ -92,4 +92,4 @@ swiper-slide img {
     .product {
         width: 165px;
     }
-}
+} */
