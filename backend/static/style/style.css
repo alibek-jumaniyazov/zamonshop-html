@@ -130,10 +130,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2px 4px;
+    padding: 10px;
     background-color: var(--add);
     color: white;
-    border-radius: 3px;
+    border-radius: 50%;
     cursor: pointer;
     scale: 90%;
     transition: all 0.4s ease;
@@ -212,7 +212,7 @@ p {
     }
 
     .product {
-        width: 160px;
+        width: 180px;
         height: 330px;
         justify-self: center;
         align-self: center;
