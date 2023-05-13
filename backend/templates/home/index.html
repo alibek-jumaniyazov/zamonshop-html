@@ -5,10 +5,10 @@
 <!-- Main qismi -->
 <main>
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="border-radius: 10px;">
             {% for ban in banner %}
             <div class="carousel-item active">
-                <img style="border-radius: 10px;" src="{{ban.image.url}}" class="d-block w-100" alt="">
+                <img style="border-radius: 10px; width: 100%;" src="{{ban.image.url}}" class="d-block w-100" alt="">
             </div>
             {% endfor %}
             {% comment %} <div class="carousel-item">

@@ -79,3 +79,11 @@ swiper-slide img {
         max-height: 80%;
     }   
 }
+
+
+
+@media screen and (max-width: 380px) {
+    .product {
+        width: 160px;
+    }
+}
