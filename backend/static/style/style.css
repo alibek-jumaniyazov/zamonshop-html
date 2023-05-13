@@ -392,6 +392,10 @@ p {
         line-height: 15px;
         color: white;
     }
+    .mobilResponsiveDivs img{
+        width: 25px;
+        height: 25px;
+    }
     .korish {
         display: flex;
         justify-content: center;
