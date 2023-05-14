@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Banner
+from .models import Banner, SwipperBanner
 from products.models import Category
 
 # Create your views here.
@@ -12,7 +12,9 @@ def index(request):
 
     context = {
         "categories": categories,
-        "banner": Banner.objects.all().order_by("-id")[:5]
+        "banner": Banner.objects.all().order_by("-id")[:5],
+        "swipe_banner": SwipperBanner.objects.all().order_by("-id")[:5],
+
     }
 
     return render(request, 'home/index.html', context)

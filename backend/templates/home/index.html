@@ -6,11 +6,20 @@
 <main>
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" style="border-radius: 10px;">
+            {% if banner %}
+
             {% for ban in banner %}
             <div class="carousel-item active">
                 <img style="border-radius: 10px; width: 100%;" src="{{ban.image.url}}" class="d-block w-100" alt="">
             </div>
             {% endfor %}
+            
+            {% else %}
+            <div class="carousel-item active">
+                <img style="border-radius: 10px; width: 100%;" src="https://images.uzum.uz/chf3ql56sfhndlbm30ug/main_page_banner.jpg" class="d-block w-100" alt="">
+            </div>
+
+            {% endif %}
             {% comment %} <div class="carousel-item">
                 <img src="{% static 'images/1.a742c0f72d4bfa03a98a.png.svg' %}" class="d-block w-100" alt="">
             </div> {% endcomment %}
@@ -20,8 +29,14 @@
     <div class="resHeader">
         <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false"
             space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
-            <swiper-slide><a href=""><img src="https://s.alicdn.com/@img/imgextra/i3/O1CN01C3ATKV23zok8V3dzo_!!6000000007327-0-tps-486-816.jpg_640x640q80.jpg" alt=""></a></swiper-slide>
-            <swiper-slide><a href=""><img src="https://s.alicdn.com/@img/imgextra/i4/O1CN01UY02aB1RrcJarRZ5d_!!6000000002165-0-tps-486-816.jpg_640x640q80.jpg" alt=""></a></swiper-slide>
+            {% if swipe_banner %}
+                {% for sp in swipe_banner %}
+                    <swiper-slide><a href=""><img src="{{ sp.image.url }}" alt="bnimag"></a></swiper-slide>
+                {% endfor %}
+                {% else %}
+                    <swiper-slide><a href=""><img src="https://s.alicdn.com/@img/imgextra/i3/O1CN01C3ATKV23zok8V3dzo_!!6000000007327-0-tps-486-816.jpg_640x640q80.jpg" alt=""></a></swiper-slide>
+                    <swiper-slide><a href=""><img src="https://s.alicdn.com/@img/imgextra/i4/O1CN01UY02aB1RrcJarRZ5d_!!6000000002165-0-tps-486-816.jpg_640x640q80.jpg" alt=""></a></swiper-slide>
+            {% endif %}
         </swiper-container>
         <div class="randomProd">
             <div class="randomProdChil1">

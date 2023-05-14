@@ -6,18 +6,23 @@ from mptt.fields import TreeForeignKey
 from users.models import User
 
 
-class Category(models.Model):
+class Category(MPTTModel):
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
 
-    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
+    parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
     
 
     class Meta:
         verbose_name_plural = 'categories'
 
-    def __str__(self):
-        return self.name
+    def __str__(self):                           # __str__ method elaborated later in
+        full_path = [self.name]                  # post.  use __unicode__ in place of
+        k = self.parent
+        while k is not None:
+            full_path.append(k.name)
+            k = k.parent
+        return ' / '.join(full_path[::-1])
 
 
 class Subcategory(models.Model):
