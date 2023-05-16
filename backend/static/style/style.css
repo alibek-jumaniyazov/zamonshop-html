@@ -578,7 +578,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #e4ecfa;
+    /* background: #e4ecfa; */
   }
   
 
