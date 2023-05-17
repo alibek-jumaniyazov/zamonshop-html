@@ -389,18 +389,27 @@
     </div>
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="border-radius: 10px;">
+            {% if banner %}
+
+            {% for ban in banner %}
             <div class="carousel-item active">
-                <img src="../images/1.a742c0f72d4bfa03a98a.png.svg" class="d-block w-100" alt="">
+                <img style="border-radius: 10px; width: 100%;" src="{{ban.image.url}}" class="d-block w-100" alt="">
             </div>
-            <div class="carousel-item">
-                <img src="../images/1.a742c0f72d4bfa03a98a.png.svg" class="d-block w-100" alt="">
+            {% endfor %}
+            
+            {% else %}
+            <div class="carousel-item active">
+                <img style="border-radius: 10px; width: 100%;" src="https://images.uzum.uz/chf3ql56sfhndlbm30ug/main_page_banner.jpg" class="d-block w-100" alt="">
             </div>
-            <div class="carousel-item">
-                <img src="../images/1.a742c0f72d4bfa03a98a.png.svg" class="d-block w-100" alt="">
-            </div>
+
+            {% endif %}
+            {% comment %} <div class="carousel-item">
+                <img src="{% static 'images/1.a742c0f72d4bfa03a98a.png.svg' %}" class="d-block w-100" alt="">
+            </div> {% endcomment %}
         </div>
     </div>
+
     <div class="productInfo">
         <h1>Ko'p sotilganlar <img src="../images/Vector.svg" alt=""></h1>
 
