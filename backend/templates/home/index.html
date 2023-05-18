@@ -96,19 +96,20 @@
         <!-- Mahsulotlar -->
 
         <div class="Products">
-
+            {% for prod in products %}
+            
             <div class="product">
                 <a href="{% url 'products:detail' %}">
                     <div class="img">
-                        <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
+                        <img src="{{ prod.image.url }}" alt="" />
 
                     </div>
                 </a>
                 <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
+                    <p class="name">{{prod.name}}</p>
 
                     <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
+                        <p class="hozirgi">{{prod.price}} so'm</p>
 
                         <div class="korish">
                             <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
@@ -117,125 +118,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
 
 
         </div>
