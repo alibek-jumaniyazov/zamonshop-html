@@ -126,3 +126,23 @@
         background-color: transparent;
     }
 }
+
+.sale {
+    width: 55px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.sale span {
+    color: white;
+    font-size: 12px;
+}

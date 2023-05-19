@@ -99,6 +99,9 @@
             {% for prod in products %}
             
             <div class="product">
+                <div class="sale">
+                    <span>20%/sale</span>
+                </div>
                 <a href="{% url 'products:detail' %}">
                     <div class="img">
                         <img src="{{ prod.image.url }}" alt="" />
@@ -132,6 +135,9 @@
         <div class="Products">
 
             <div class="product">
+                <div class="sale">
+                    <span>20%/sale</span>
+                </div>
                 <div class="img">
                     <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
 
