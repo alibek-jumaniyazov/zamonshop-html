@@ -177,7 +177,7 @@ header {
 .kategoriListes{
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 auto;
     margin-top: 40px;
     width: 1240px;
@@ -186,7 +186,7 @@ header {
 .kategoriList{
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     margin-right: 20px;
     padding-right:100px;
@@ -204,7 +204,8 @@ section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100px;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .items div p{
     margin-right: 20px;
