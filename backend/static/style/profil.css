@@ -222,3 +222,174 @@
 .userProfil .userAdress .userAdressSave:active {
     transform: scale(0.98);
 }
+
+/* mobile version  */
+
+@media screen and (min-width: 360px) and (max-width: 414px) {
+    .userProfil {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .userProfil .userProfilLeft {
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        padding: 0px;
+        border-radius: 0px;
+        border: none;
+        gap: 10px;
+    }
+
+    .userProfil .userProfilLeft a {
+        width: auto;
+    }
+
+    .userProfil .userProfilLeft a button {
+        width: auto;
+        height: 20px;
+        padding: 0px;
+    }
+
+    .userProfil .userProfilLeft button i {
+        display: none;
+    }
+
+    .userProfil .userProfilLeft button span {
+        font-size: 12px;
+    }
+
+    .userProfil .userProfilLeft .boti {
+        display: none;
+    }
+
+    .userProfil .userProfilLeft .activeProfil {
+        background-color: transparent;
+        border: none;
+        color: red;
+    }
+
+    .userProfil .userInfos {
+        width: 100%;
+    }
+
+    .userProfil .userInfos .userInfos_Title {
+        font-size: 14px;
+    }
+
+    .userProfil .userInfos .inInfos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .userProfil .userInfos .inInfos .inInfosChil label {
+        font-size: 14px;
+    }
+
+    .userProfil .userInfos .inInfos .inInfosChil input::placeholder {
+        font-size: 12px;
+    }
+
+    .userProfil .userInfos .inInfos .inInfosChil input {
+        font-size: 14px;
+    }
+
+    .userProfil .userInfos .inInfos .inInfosChil select {
+        font-size: 12px;
+    }
+
+    .userInfosSaveBtn {
+        width: 100%;
+    }
+
+    .userProfil .myproducts {
+        width: 100%;
+    }
+
+    .userProfil .myproducts .myproducts_title {
+        font-size: 14px;
+    }
+
+    .userProfil .myproducts .myproductsCat {
+        width: 100%;
+        height: auto;
+        align-items: flex-start;
+        overflow-x: scroll;
+        justify-content: space-between;
+        gap: 30px;
+        border: none;
+        position: relative;
+    }
+
+    .userProfil .myproducts .myproductsCat::after {
+        content: "";
+        position: absolute;
+        width: 150%;
+        width: 125%;
+        height: 1px;
+        background-color: black;
+        left: 0;
+        bottom: 0;
+    }
+
+    .userProfil .myproducts .myproductsCat .myproductsCatLI {
+        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .userProfil .myproducts .myproductsCat::-webkit-scrollbar {
+        width: 10px;
+    }
+    .userProfil .myproducts .myproductsCat::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .userProfil .myproducts .myproductsCat::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+
+    .userProfil .myproducts .myproducts_products {
+        gap: 20px;
+    }
+
+    .userProfil .myproducts .myproducts_products .myproducts_products_product {
+        gap: 20px;
+    }
+
+    .userProfil .myproducts .myproducts_products .myproducts_products_product img {
+        width: 40px;
+    }
+
+    .userProfil .myproducts .myproducts_products .myproducts_products_product .myproducts_products_product_productName {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .userProfil .myproducts .myproducts_products .myproducts_products_product .myproducts_products_product_Shtuk {
+        font-size: 12px;
+    }
+
+    .userProfil .myproducts .myproducts_products .myproducts_products_product .myproducts_products_product_Price {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .userProfil .userAdress {
+        width: 100%;
+    }
+    .userProfil .userAdress .userAdressTItle {
+        font-size: 14px;
+    }
+    .userProfil .userAdress .addAdress {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .userProfil .userAdress .addAdress .addAdressChil label {
+        font-size: 12px;
+    }
+    .userProfil .userAdress .addAdress .addAdressChil select {
+        font-size: 12px;
+    }
+    .userProfil .userAdress .addAdress .addAdressChil input {
+        font-size: 14px;
+    }
+    .userProfil .userAdress .userAdressSave {
+        width: 100%;
+    }
+}

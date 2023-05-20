@@ -6,7 +6,9 @@
     font-family: sans-serif;
     text-decoration: none;
 }
-
+body {
+  background-color: aliceblue;
+}
 p {
     margin: 0;
 }
@@ -51,10 +53,11 @@ p {
 }
 
 .product {
-    width: 280px;
+    width: 220px;
     background-color: #ffffff;
-    height: 450px;
+    height: 380px;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     border-radius: 10px;
     -webkit-box-shadow: 0px 5px 45px -20px rgba(34, 60, 80, 0.2);
@@ -64,15 +67,19 @@ p {
 }
 
 .img {
+  height: 80%;
     position: relative;
     transition: all 0.4s ease;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img img {
-    width: 280px;
-    height: 280px;
+    width: 100%;
+    height: auto;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
@@ -117,7 +124,6 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
 }
 
 .sum {
@@ -643,7 +649,7 @@ p {
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 150px;
+        height: auto;
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
     }
@@ -660,6 +666,7 @@ p {
 
     .name {
         width: 100%;
+        line-height: 24px;
     }
 
     .korish p {
