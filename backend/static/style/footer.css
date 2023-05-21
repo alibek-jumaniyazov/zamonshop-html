@@ -66,6 +66,7 @@
 
     .footer2 {
         display: flex !important;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         width: 100%;
