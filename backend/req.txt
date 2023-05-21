@@ -8,3 +8,5 @@ djangorestframework_simplejwt
 twilio
 requests
 environs
+channels
+channels_redis

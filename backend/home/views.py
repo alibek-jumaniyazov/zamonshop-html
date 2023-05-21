@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Banner, SwipperBanner
 from products.models import Category, Product
@@ -6,10 +6,10 @@ from products.models import Category, Product
 # Create your views here.
 
 
-def index(request):
+def index(request, cat_id=None):
 
     categories = Category.objects.filter(children=None)
-    products = Product.objects.all().order_by("-id")[:10]
+    products = Product.objects.filter(category__id=cat_id) if cat_id else Product.objects.all().order_by("-id")[:10]
 
     context = {
         "categories": categories,
@@ -20,9 +20,9 @@ def index(request):
     }
 
     return render(request, 'home/index.html', context)
-    
+
+
 
 def chat(request):
-
     return render(request, 'chat/chat.html')
 

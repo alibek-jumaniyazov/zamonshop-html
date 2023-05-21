@@ -102,7 +102,7 @@
                 <div class="sale">
                     <span>20%/sale</span>
                 </div>
-                <a href="{% url 'products:detail' %}">
+                <a href="{% url 'products:product_detail' prod.id %}">
                     <div class="img">
                         <img src="{{ prod.image.url }}" alt="" />
 

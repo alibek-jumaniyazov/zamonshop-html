@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required
 
@@ -16,8 +16,12 @@ from .serializers import CategorySerializer, SubcategorySerializer, ProductSeria
 def products(request):
     return render(request, "products/products.html")
 
-def product(request):
-    return render(request, "products/product.html")
+def product_detail(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    context = {
+        "product":product,
+    }
+    return render(request, 'products/product_detail.html', context)
 
 def productCategory(request):
     return render(request, "products/productsCategory.html")

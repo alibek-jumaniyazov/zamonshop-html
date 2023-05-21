@@ -1,0 +1,79 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="productPage">
+    <div class="productPage_Image">
+        <p class="boshTitle">Bosh sahifa / Barcha turkumlar / Oziq-ovqat mahsulotlari / Bakaleya / Yog’lar </p>
+        <div class="productPage_Img">
+            <div class="productImages">
+                <img class="productImgInfo_mini" src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
+                <img class="productImgInfo_mini" src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
+                <img class="productImgInfo_mini" src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
+                <img class="productImgInfo_mini" src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
+                <img class="productImgInfo_mini" src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
+            </div>
+            <img class="productImgInfo" src="{{product.image.url}}" alt="">
+        </div>
+
+    </div>
+    <div class="productPage_Info">
+        <div class="ballHator">
+            <div class="ballar">
+                <p>5.0</p>
+                <p>(842 baho)</p>
+                <p>Koʻproq 37500 buyurtma</p>
+            </div>
+
+            <div class="izbrenni">
+                <i class="fa-regular fa-heart" style="color: #000000;"></i>
+                <p class="likee">Istaklarga</p>
+            </div>
+        </div>
+        <div class="infoHator">
+            <p>{{product.name}}</p>
+        </div>
+        <div class="productInfoHator">
+            <div class="sotuvchi">
+                <p>Sotuvchi:</p>
+                <p>PROGRESS</p>
+            </div>
+            <div class="yetkazish">
+                <p>Yetkazib berish:</p>
+                <p>1 kun, bepul</p>
+            </div>
+        </div>
+        <hr>
+        <div class="counterSotuv">
+            <p>Miqdor:</p>
+            <div class="CounterS">
+                <div class="Counter">
+                    <span class="counterBtn">-</span>
+                    <span>1</span>
+                    <span class="counterBtn">+</span>
+                </div>
+                <span style="color: #0c16a5;" class="productSon">Bor-yoʻgi 2 dona qoldi</span>
+            </div>
+        </div>
+        <div class="harxHator">
+            <span>Narx:</span>
+            <p>{{product.price}} so'm</p>
+        </div>
+        <div class="btnsHator">
+            <span>Savatga qoʻshish</span>
+            <p>Hoziroq sotib olish</p>
+        </div>
+    </div>
+    <div class="mobilFooterKarzina">
+        <div class="mobilResponsiveNarx">
+            <span>Narx umumiy</span>
+            <p>14 000 so'm</p>
+        </div>
+        <i class="fa-regular fa-heart" style="color: #ffffff;"></i>
+        <p class="mobilresponsiveBtn">
+            Savatga
+        </p>
+    </div>
+</div>
+
+{% endblock content %}

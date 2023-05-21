@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'corsheaders',
+    
+    'channels',
 
     'rest_framework',
     'rest_framework_simplejwt',
@@ -184,3 +186,14 @@ CORS_ALLOWED_ORIGINS = [
 LOGIN_URL = "/users/login/"
 LOGOUT_URL = "users/logout/"
 
+
+# REdis
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('localhost', 6379)],
+        },
+    },
+}
