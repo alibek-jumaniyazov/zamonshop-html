@@ -7,7 +7,7 @@ __pycache__/
 staticfiles
 # C extensions
 *.so
-
+.backend
 # Distribution / packaging
 .Python
 build/
